@@ -16,6 +16,7 @@
 body,
 html {
 	font-size: var(--bs-body-font-size);
+	font-variation-settings: $font-variation-regular;
 }
 html{
 	-webkit-text-size-adjust: 100%;

@@ -1,8 +1,13 @@
-$default-font: "roboto";
+$default-font: "Roboto Flex";
 // $file-form: ($file-formats: woff2 woff ttf);
 $addr: '../fonts/';
 $file-format: woff2;
 
+@font-face {
+	font-family: "Roboto Flex";
+	src: url("../fonts/RobotoFlex-VariableFont.woff2") format("woff2-variations"), url("../fonts/RobotoFlex-Regular.woff2") format("woff2");
+	font-weight: 1 999;
+}
 
 // If font from googlefont, next lines remove
 

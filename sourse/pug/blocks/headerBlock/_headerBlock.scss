@@ -6,14 +6,17 @@
 	min-height: 100vh;
 	min-height: calc(var(--vh, 1vh) * 100);
 	
-	
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
 	.section-title{
-		
+		h2 {
+			font-variation-settings: $font-variation-bold;
+			text-transform: uppercase;
+			font-weight: 766;
+		}
 	}
 	&__col{
 
