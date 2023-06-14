@@ -134,6 +134,10 @@ main{
 
 .section-title {
 	margin-bottom: var(--sTPB);
+	h1, h2, h3, h4, h5, h6 {
+		@extend .fvb;
+		text-transform: uppercase;
+	}
 }
 
 
@@ -142,7 +146,7 @@ main{
 	font-family: $font-family-code;
 }
 
-.small {
+small, .small {
 	font-size: $small;
 }
 
@@ -547,3 +551,9 @@ iframe {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.fvb {
+	font-variation-settings: $font-variation-bold;
+	font-weight: 766;
+}
+
