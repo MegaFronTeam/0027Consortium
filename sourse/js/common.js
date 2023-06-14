@@ -358,6 +358,7 @@ function eventHandler() {
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
+	JSCCommon.imgToSVG();
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
 	JSCCommon.disabledBtn();

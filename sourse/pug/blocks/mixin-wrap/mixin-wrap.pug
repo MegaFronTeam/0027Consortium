@@ -50,3 +50,9 @@ mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
+
+mixin download-link(t, s)
+	+b.download-link(href="#" download)&attributes(attributes)
+		+img('img/svg/docs.svg').img-svg-js
+		+e.title!= t
+		+e.subtitle!=s
