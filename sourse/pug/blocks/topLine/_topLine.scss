@@ -3,6 +3,8 @@
 	--sPT: #{rem(16)};
 	--sPB: #{rem(16)};
 	// --sTPB: #{rem()};
+	background-color: $primary;
+
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(20)};
 		--sPB: #{rem(20)};
@@ -27,6 +29,17 @@
 			@include media-breakpoint-down(lg) {
 				width: rem(280);
 			}
+		}
+	}
+	.toggle-menu-mobile {
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: calc(100% + var(--bs-gutter-x));
+			height: calc(100% + var(--bs-gutter-x));
+			left: calc(var(--bs-gutter-x) / -2);
+			top: calc(var(--bs-gutter-x) / -2);
 		}
 	}
 

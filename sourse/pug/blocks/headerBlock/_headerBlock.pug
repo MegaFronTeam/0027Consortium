@@ -1,18 +1,10 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
+		+e.container.container
 			+b.section-title
-				h1 h1 Индустриальный центр компетенций
-				h2 h2 Цели деятельности Консорциума
-				h3 h3 Цели деятельности Консорциума
-				h4 h4 Цели деятельности Консорциума
-				h5 h5 Цели деятельности Консорциума
-				h6 h6 Цели деятельности Консорциума
-			
-			p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, soluta qui rerum architecto aliquid, odit optio maxime beatae dolorum iste ex earum culpa facere quo velit quod perferendis odio. Qui.
-			p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, soluta qui rerum architecto aliquid, odit optio maxime beatae dolorum iste.
-			small Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt libero quae numquam asperiores? Ad in excepturi, ab porro incidunt illum obcaecati fugiat quasi doloribus cupiditate natus rem accusantium deleniti quaerat, commodi est! Beatae tenetur ipsum inventore asperiores maiores modi blanditiis.
-
+				h1 Достижение <br> технологического <br> суверенитета в&nbsp;отечественной медицинской промышленности
+		+e.img-wrap
+			+img('img/headerBlock-bg.jpg', 'bg')
 
 	// end headerBlock
