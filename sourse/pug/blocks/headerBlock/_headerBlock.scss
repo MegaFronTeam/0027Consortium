@@ -44,6 +44,10 @@
 		position: relative;
 		overflow: hidden;
 		max-height: rem(304);
+		@include media-breakpoint-down(lg) {
+			max-height: unset;
+			@include block(304, 1200);
+		}
 	}
 
 	@include media-breakpoint-up(xl) {
