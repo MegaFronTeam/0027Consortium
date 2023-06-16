@@ -2,14 +2,14 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
 			+e.row.row
-			+form-wrap
-				+input("",'')
-				+input("",'')
-				+input("",'')
-				+e.btn.btn.btn-primary(type="submit") Submit
-				+policy
+				.col-lg-7.col-xxl
+					+b.section-title
+						h2 Будьте в&nbsp;курсе последних событий в&nbsp;отрасли
+						p Подпишитесь на&nbsp;рассылку новостей
+				.col-lg
+					+form-wrap
+						+input("Ваш e-mail",'email')
+							+e.btn.btn.btn-primary(type="submit") Подписаться
+						+policy
 	// end sForm
