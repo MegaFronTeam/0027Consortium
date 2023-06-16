@@ -1,0 +1,74 @@
+// start .sBanner
+.sBanner {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	--sTPB: #{rem(40)};
+	color: $white;
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	&__wrapper {
+		position: relative;
+		background-color: $primary;
+		padding: rem(58) rem(74);
+		overflow: hidden;
+		@include media-breakpoint-down(sm) {
+			padding: rem(54) 4.5%;
+		}
+		img {
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 100%;
+			z-index: -1;
+			@include media-breakpoint-down(lg) {
+				opacity: 0.2;
+			}
+		}
+	}
+	.section-title {
+		h2 {
+			color: $white;
+			margin-bottom: rem(24);
+		}
+		p {
+			font-weight: 400;
+			font-size: rem(16);
+			line-height: 150%;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	// &__col {
+	// }
+	// &__item {
+	// }
+	&__btn {
+		--bs-btn-color: #{$primary};
+		--bs-btn-bg: #fff;
+		--bs-btn-border-color: #fff;
+		--bs-btn-hover-color: #fff;
+		--bs-btn-hover-bg: #{$primary};
+		--bs-btn-hover-border-color: #fff;
+		--bs-btn-active-color: #{$primary};
+		--bs-btn-active-bg: #fff;
+		--bs-btn-active-border-color: #fff;
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sBanner
