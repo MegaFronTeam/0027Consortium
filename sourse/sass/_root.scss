@@ -19,6 +19,15 @@
 		--bs-body-font-size: #{$em-base};
 	}
 
+	.row {
+		--bs-gutter-x: #{rem(20)};
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(24)};
+		}
+		@include media-breakpoint-up(xxl) {
+			--bs-gutter-x: #{rem(32)};
+		}
+	}
 
 	--fancybox-content-color: var(--bs-body-color);
 	--swiperArrowSize: #{rem(68)};
