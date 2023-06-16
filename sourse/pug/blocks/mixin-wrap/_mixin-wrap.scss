@@ -97,11 +97,6 @@
 	}
 }
 
-.breadcrumb-item {
-	width: auto;
-	margin-right: rem(32);
-}
-
 .download-link {
 	position: relative;
 	display: inline-flex;
@@ -148,7 +143,7 @@
 	flex-direction: column;
 	height: 100%;
 	color: $body-color;
-	
+
 	&:hover {
 		color: $link-hover-color;
 		img {
@@ -187,13 +182,89 @@
 	}
 	p {
 		flex-grow: 1;
-		font-variation-settings: "wdth" 109, "GRAD" 0, "slnt" 0, "XTRA" 470, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750,
-			"YTDE" -203, "YTFI" 738, "opsz" 14;
+		font-variation-settings: "wdth" 109, "GRAD" 0, "slnt" 0, "XTRA" 470, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 712,
+			"YTAS" 750, "YTDE" -203, "YTFI" 738, "opsz" 14;
 		@include media-breakpoint-up(xxl) {
 			font-size: rem(24);
 		}
 		&:last-child {
 			margin-bottom: 0;
+		}
+	}
+}
+
+.page-head {
+	background-color: $primary;
+	padding-top: rem(16);
+	padding-bottom: rem(16);
+	@include media-breakpoint-up(sm) {
+		padding-top: rem(22);
+		padding-bottom: rem(22);
+	}
+	@include media-breakpoint-up(md) {
+		padding-top: rem(30);
+		padding-bottom: rem(30);
+	}
+	@include media-breakpoint-up(lg) {
+		padding-top: var(--sPT);
+		padding-bottom: rem(40);
+	}
+	@include media-breakpoint-up(xxl) {
+		padding-top: rem(73);
+	}
+	h1 {
+		color: $white;
+		margin-bottom: rem(22);
+	}
+	.breadcrumb-slider {
+		overflow: visible;
+	}
+}
+
+.breadcrumb {
+	--bs-breadcrumb-margin-bottom: 0;
+	--bs-breadcrumb-font-size: #{rem(13)};
+	--bs-breadcrumb-divider-color: var(--bs-white);
+	--bs-breadcrumb-item-padding-x: #{rem(15)};
+	--bs-breadcrumb-item-active-color: var(--bs-secondary-color);
+	display: flex;
+	flex-wrap: nowrap;
+	font-family: "Manrope";
+	.breadcrumb-item {
+		width: auto;
+		line-height: calc(18 / 13);
+		// margin-right: rem(32);
+		a {
+			color: $white;
+			display: inline-block;
+			line-height: inherit;
+			position: relative;
+			&::after {
+				content: "";
+				@include mt(0.25s);
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 1px;
+				background-color: #fff;
+				max-width: 0;
+			}
+			&:hover {
+				&::after {
+					max-width: 100%;
+				}
+			}
+		}
+		span {
+			display: inline-block;
+			line-height: inherit;
+		}
+		&.active {
+			a {
+				// color: $breadcrumb-active-color;
+				pointer-events: none;
+			}
 		}
 	}
 }
