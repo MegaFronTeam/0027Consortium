@@ -56,3 +56,10 @@ mixin download-link(t, s)
 		+img('img/svg/docs.svg').img-svg-js
 		+e.title!= t
 		+e.subtitle!=s
+
+mixin section-title(sub, title)
+	+b.section-title--underline
+		+e.subtitle!= sub
+		h2 
+			span!= title
+		block

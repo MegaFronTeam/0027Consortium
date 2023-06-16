@@ -30,6 +30,9 @@
 			gap: rem(32);
 		}
 		.sGoalsItem {
+			@include media-breakpoint-only(sm) {
+				flex-direction: row;
+			}
 			@include media-breakpoint-up(md) {
 				grid-column: span 2;
 			}
@@ -75,9 +78,7 @@
 	padding: rem(30);
 	height: 100%;
 	font-size: rem(18);
-	@include media-breakpoint-only(sm) {
-		flex-direction: row;
-	}
+	
 	@include media-breakpoint-only(md) {
 		font-size: rem(16);
 	}
