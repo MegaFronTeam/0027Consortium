@@ -74,3 +74,15 @@ mixin newsItem(i, p)
 			+e.date 29.04.2022
 			+e.topic Новости Консорциума
 		p!= p
+
+
+mixin listBlock(h4, h2)
+	+b.listBlock&attributes(attributes)
+		+e.row.row
+			.col-lg-5
+				if h2 
+					.h2!= h2
+				else
+					+e.title!= h4
+			.col-lg-7
+				block
