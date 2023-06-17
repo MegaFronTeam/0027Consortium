@@ -26,7 +26,14 @@
 			border-top: 1px solid $light-primary;
 		}
 		&:before {
-			@extend .h2;
+			// @extend .h2;
+			font-size: $h2-font-size;
+			font-variation-settings: $font-variation-bold;
+			color: var(--bs-heading-color);
+			font-weight: 766;
+			line-height: 1;
+			margin-top: 0;
+
 			counter-increment: li;
 			content: counters(li, ".");
 			display: inline-block;
