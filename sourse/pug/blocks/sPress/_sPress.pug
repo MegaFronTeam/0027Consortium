@@ -1,0 +1,17 @@
+mixin sPress(data)
+	// start sPress
+	+b.sPress.section#sPress&attributes(attributes)
+		.container
+			+e.row.row
+				.col-sm-6.col-lg-4
+					mixin press-item(i, h)
+						+b.pressItem(href="#")
+							+icon(`sPress-${i}`)
+							+e.title!= h
+					+press-item(1, `Новости`)
+				.col-sm-6.col-lg-4
+					+press-item(2, `Презентации`)
+				.col-sm-6.col-lg-4
+					+press-item(3, `Медиатека`)
+				
+	// end sPress

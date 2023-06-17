@@ -1,0 +1,43 @@
+extends ../layout/main.pug
+
+include ../blocks/sPress/_sPress.pug
+include ../blocks/sForm/_sForm.pug
+//- include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/sGoals/_sGoals.pug
+//- include ../blocks/sBanner/_sBanner.pug
+//- include ../blocks/sBenefits/_sBenefits.pug
+//- include ../blocks/sNotice/_sNotice.pug
+//- include ../blocks/sPartners/_sPartners.pug
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '05-press-center.jpg'
+
+block title
+	- let  title= 'Пресс-центр'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+
+
+	+parts('header')
+	main
+		+page-head(title, title)
+		+sPress()
+		//- +headerBlock()
+		//- +sGoals()
+		//- +sBanner()
+		//- +sBenefits()
+		//- +sNotice()
+		//- +sPartners()
+		+sForm()
+		//- +sCatalog
+		//- +sContact()
+
+	+parts('footer')
+
+
+
+

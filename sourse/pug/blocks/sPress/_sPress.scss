@@ -1,0 +1,62 @@
+// start .sPress
+.sPress {
+	--sPT: #{rem(96)};
+	--sPB: #{rem(103)};
+	// --sTPB: #{rem()};
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: var(--bs-gutter-x);
+		justify-content: center;
+	}
+	.section-title {
+	}
+	&__col {
+	}
+	&__item {
+	}
+	.pressItem {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sPress
+
+.pressItem {
+	@include block(296, 416);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 5%;
+	border: 1px solid $primary;
+	color: $primary;
+	background-color: $white;
+	max-width: rem(420);
+	&:hover {
+		color: $white;
+		background-color: $primary;
+	}
+	.icon {
+		font-size: rem(64);
+		margin-bottom: 10.75%;
+	}
+	&__title {
+		font-weight: 400;
+		font-size: rem(24);
+		line-height: 150%;
+	}
+}
