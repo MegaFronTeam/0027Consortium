@@ -1,0 +1,118 @@
+// start .sPlan
+.sPlan {
+	--sPT: #{rem(96)};
+	// --sPB: #{rem(103)};
+	// --sTPB: #{rem()};
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+	}
+	&__col {
+	}
+	.orderedList {
+		list-style: none;
+		counter-reset: li;
+		padding-left: 0;
+	}
+
+	.listItem {
+		position: relative;
+		padding-top: var(--sizing);
+		padding-bottom: var(--sizing);
+		border-bottom: 1px solid $light-primary;
+		&:first-child {
+			border-top: 1px solid $light-primary;
+		}
+		&:before {
+			@extend .h2;
+			counter-increment: li;
+			content: counters(li, ".");
+			display: inline-block;
+			margin-bottom: calc(var(--sizing) / 2);
+			@include media-breakpoint-up(md) {
+				margin-bottom: 0;
+				position: absolute;
+				left: 0;
+				top: var(--sizing);
+			}
+		}
+	}
+	&__wrap {
+		ol {
+			margin-bottom: 0;
+		}
+		& > ol {
+			@extend .orderedList;
+			& > li {
+				@extend .listItem;
+				min-height: rem(120);
+				& > ol {
+					@extend .orderedList;
+					& > li {
+						@extend .listItem;
+						&:last-child {
+							padding-bottom: 0;
+							border-bottom: none;
+						}
+						&:first-child {
+							margin-top: var(--sizing);
+						}
+					}
+				}
+			}
+		}
+	}
+	--sizing: #{rem(30)};
+	@include media-breakpoint-up(lg) {
+		--sizing: #{rem(40)};
+	}
+	&__item {
+		@include media-breakpoint-up(md) {
+			margin-left: calc(var(--sizing) * 3.25);
+			max-width: 50.8em;
+		}
+		b {
+			font-weight: 600;
+		}
+		P {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		ol {
+			list-style: none;
+			counter-reset: num;
+			padding-left: 0;
+			font-size: rem(16);
+			color: $secondary;
+			li {
+				position: relative;
+				padding-left: em(30);
+				&:before {
+					counter-increment: num;
+					content: counters(num, ".") ". ";
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sPlan

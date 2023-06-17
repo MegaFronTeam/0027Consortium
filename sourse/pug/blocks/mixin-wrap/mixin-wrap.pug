@@ -59,7 +59,8 @@ mixin download-link(t, s)
 
 mixin section-title(sub, title)
 	+b.section-title--underline
-		+e.subtitle!= sub
+		if sub
+			+e.subtitle!= sub
 		h2 
 			span!= title
 		block
