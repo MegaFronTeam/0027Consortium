@@ -607,7 +607,8 @@ $font-family-code:            var(--#{$prefix}font-monospace) !default;
 
 // custom font-variation-settings
 $font-variation-bold: "wdth" 132, 'GRAD' 138, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 91, 'YTLC' 514, 'YTUC' 619, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738, 'opsz' 144;
-$font-variation-regular: "wdth" 120, 'GRAD' 0, 'slnt' 0, 'XTRA' 470, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738, 'opsz' 14;
+$font-variation-regular: "wdth" 120, "GRAD" 0, "slnt" 0, "XTRA" 470, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750, "YTDE" -203, "YTFI" 738, "opsz" 20;
+// $font-variation-regular: "wdth" 120, 'GRAD' 0, 'slnt' 0, 'XTRA' 470, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738, 'opsz' 14;
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text

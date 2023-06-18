@@ -89,7 +89,7 @@ mixin listBlock(h4, h2, sub)
 		+e.row.row
 			.col-lg-5
 				if h2 
-					.h2!= h2
+					h2!= h2
 				else
 					+e.title!= h4
 					if sub

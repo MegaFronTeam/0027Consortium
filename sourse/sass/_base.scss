@@ -137,8 +137,8 @@ main {
 	&__descr {
 		font-size: $h2-font-size;
 		margin-top: var(--sTPB);
-		font-variation-settings: "wdth" 86, "GRAD" 0, "slnt" 0, "XTRA" 470, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750,
-			"YTDE" -203, "YTFI" 738, "opsz" 14;
+		font-variation-settings: "wdth" 120, "GRAD" 0, "slnt" 0, "XTRA" 470, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750,
+			"YTDE" -203, "YTFI" 738, "opsz" 40;
 		line-height: 125%;
 		@include media-breakpoint-down(xxl) {
 			@include rfs(#{rem(28)}, font-size);
