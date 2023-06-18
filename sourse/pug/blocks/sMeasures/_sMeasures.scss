@@ -39,6 +39,12 @@
 		color: $primary;
 		margin-bottom: rem(18);
 		@include rfs(200px, font-size);
+		@include media-breakpoint-only(lg) {
+			font-size: rem(180);
+		}
+		@include media-breakpoint-down(sm) {
+			font-size: 6rem;
+		}
 	}
 	&__sub {
 		font-size: $h5-font-size;
@@ -68,4 +74,3 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sMeasures
-
