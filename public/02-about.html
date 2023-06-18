@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>О консорциуме</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+							wrap.remove();
+						}
+					);
+			}
+		</script>
+	</head>
+	<body class="main-page" data-bg="02-about.jpg">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<h1>О консорциуме</h1>
+						<nav class="swiper breadcrumb-slider breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">О консорциуме</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				<!-- start sAboutMenu-->
+				<section class="sAboutMenu section" id="sAboutMenu">
+					<div class="container">
+						<div class="section-title text-center">
+							<h2>sAboutMenu</h2>
+						</div>
+						<div class="sAboutMenu__row row">
+						</div>
+					</div>
+				</section>
+				<!-- end sAboutMenu-->
+				<!-- start sRoles-->
+				<section class="sRoles section" id="sRoles">
+					<div class="container">
+						<div class="section-title section-title--underline">
+							<h2> <span>Роли участников проекта</span></h2>
+						</div>
+						<div class="sRoles__wrap">
+							<div class="listBlock pt-0">
+								<div class="listBlock__row row">
+									<div class="col-lg-5">
+										<div class="listBlock__title">Заказчик/ <br> учреждение системы здравоохранения
+										</div>
+									</div>
+									<div class="col-lg-7">
+										<ul>
+											<li>Разработка и&nbsp;формирование МТТ и&nbsp;ТЗ для проведения конкурсных процедур;</li>
+											<li>Обеспечение финансирования для оплаты лизинговых платежей;</li>
+											<li>Обеспечение строительной готовности подведомственных медицинских учреждений;</li>
+											<li>Участие в&nbsp;разработкеи формирование МТТ и&nbsp;ТЗ для проведения конкурсных процедур;</li>
+											<li>Получение финансирования для оплаты лизинговых платежей;</li>
+											<li>Осуществление лизинговых платежей;</li>
+											<li>Получение оборудования с&nbsp;его последующей передачей</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="listBlock">
+								<div class="listBlock__row row">
+									<div class="col-lg-5">
+										<div class="listBlock__title">АНО «КМТ»
+										</div>
+									</div>
+									<div class="col-lg-7">
+										<ul>
+											<li>Участие в&nbsp;качестве экспертной организации в&nbsp;формировании МТТ (совместно с&nbsp;заказчиком/учреждением системы здравоохранения);</li>
+											<li>Участие в&nbsp;качестве экспертной организации в&nbsp;процедуре выбора поставщиков/ производителей медицинского оборудования, а&nbsp;также поставщиков услуг сервисного обслуживания с&nbsp;целью определения необходимых критериев к&nbsp;предмету поставки/оказанию услуги, а&nbsp;также МТТ</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="listBlock">
+								<div class="listBlock__row row">
+									<div class="col-lg-5">
+										<div class="listBlock__title">Мипромторг России
+										</div>
+									</div>
+									<div class="col-lg-7">
+										<ul>
+											<li>Предоставление поддержки в&nbsp;виде субсидий на&nbsp;приобретение оборудования производства Российской Федерации (в&nbsp;размере&nbsp;35% от&nbsp;стоимости приобретаемого оборудования) и&nbsp;ставки по&nbsp;привлекаемому кредитному финансированию (в&nbsp;размере&nbsp;90% ключевой ставки ЦБ&nbsp;РФ);</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="listBlock">
+								<div class="listBlock__row row">
+									<div class="col-lg-5">
+										<div class="listBlock__title">Лизинговая компания
+										</div>
+										<div class="listBlock__subtitle">или ее дочернее общество
+										</div>
+									</div>
+									<div class="col-lg-7">
+										<ul>
+											<li>Привлечение средств для финансирования закупки оборудования и&nbsp;последующего сервисного обслуживания;</li>
+											<li>Предоставление услуги лизинга оборудования;</li>
+											<li>Функция единственного поставщика оборудования и&nbsp;сервисного обслуживания;</li>
+											<li>Привлечение экспертных организаций для организации конкурсных процедур;</li>
+											<li>Проведение конкурсных процедур;</li>
+											<li>Заключение договора страхования оборудования в&nbsp;интересах Заказчика</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="listBlock">
+								<div class="listBlock__row row">
+									<div class="col-lg-5">
+										<div class="listBlock__title">Поставщики
+										</div>
+									</div>
+									<div class="col-lg-7">
+										<ul>
+											<li>Поставка оборудования, обеспечение сервисного и&nbsp;гарантийного обслуживания</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="listBlock">
+								<div class="listBlock__row row">
+									<div class="col-lg-5">
+										<div class="listBlock__title">Страховая компания
+										</div>
+									</div>
+									<div class="col-lg-7">
+										<ul>
+											<li>Страхование рисков гибели оборудования и&nbsp;иных рисков проекта</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="listBlock pb-0">
+								<div class="listBlock__row row">
+									<div class="col-lg-5">
+										<div class="listBlock__title">Банк
+										</div>
+									</div>
+									<div class="col-lg-7">
+										<ul>
+											<li>Предоставление в&nbsp;соответствии с&nbsp;утвержденным графиком и&nbsp;условиями, лизинговой компании кредитных средств для финансирования проекта</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sRoles-->
+				<!-- start sPartners-->
+				<section class="sPartners section" id="sPartners">
+					<div class="container">
+						<div class="section-title section-title--underline">
+							<div class="section-title__subtitle">Наши друзья
+							</div>
+							<h2> <span>Партнеры</span></h2>
+						</div>
+						<div class="sPartners__row row">
+							<div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+								<div class="sPartners__item">
+									<div class="img-wrap-center"><img src="img/sPartners-1.png" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+								<div class="sPartners__item">
+									<div class="img-wrap-center"><img src="img/sPartners-2.png" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+								<div class="sPartners__item">
+									<div class="img-wrap-center"><img src="img/sPartners-3.png" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+								<div class="sPartners__item">
+									<div class="img-wrap-center"><img src="img/sPartners-4.png" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+								<div class="sPartners__item">
+									<div class="img-wrap-center"><img src="img/sPartners-5.png" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+								<div class="sPartners__item">
+									<div class="img-wrap-center"><img src="img/sPartners-6.png" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+								<div class="sPartners__item">
+									<div class="img-wrap-center"><img src="img/sPartners-6.png" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+								<div class="sPartners__item">
+									<div class="img-wrap-center"><img src="img/sPartners-5.png" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+								<div class="sPartners__item">
+									<div class="img-wrap-center"><img src="img/sPartners-1.png" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+								<div class="sPartners__item">
+									<div class="img-wrap-center"><img src="img/sPartners-3.png" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+								<div class="sPartners__item">
+									<div class="img-wrap-center"><img src="img/sPartners-4.png" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+								<div class="sPartners__item">
+									<div class="img-wrap-center"><img src="img/sPartners-2.png" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sPartners-->
+				<!-- start sForm-->
+				<section class="sForm section" id="sForm">
+					<div class="container">
+						<div class="sForm__row row">
+							<div class="col-lg-7 col-xxl">
+								<div class="section-title">
+									<h2>Будьте в&nbsp;курсе последних событий в&nbsp;отрасли</h2>
+									<p>Подпишитесь на&nbsp;рассылку новостей</p>
+								</div>
+							</div>
+							<div class="col-lg">
+								<div class="form-wrap">
+									<form>
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="Ваш e-mail"/>
+											<button class="form-wrap__btn btn btn-primary" type="submit">Подписаться
+											</button>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="form-wrap__policy">
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Нажимая кнопку «Подписаться», я принимаю условия <a href="#">пользовательского соглашения </a>и даю своё согласие на обработку моих <a href="#">персональных данных</a></small>
+											</label>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sForm-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="libs/hc-sticky/hc-sticky.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

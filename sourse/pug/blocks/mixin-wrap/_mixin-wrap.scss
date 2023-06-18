@@ -284,6 +284,11 @@
 		line-height: 125%;
 		color: $primary;
 	}
+	&__subtitle {
+		font-weight: 600;
+		font-family: "Roboto Flex";
+		color: $secondary;
+	}
 	ul {
 		list-style: none;
 		&:last-child {

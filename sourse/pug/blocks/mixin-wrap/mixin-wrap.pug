@@ -76,7 +76,7 @@ mixin newsItem(i, p)
 		p!= p
 
 
-mixin listBlock(h4, h2)
+mixin listBlock(h4, h2, sub)
 	+b.listBlock&attributes(attributes)
 		+e.row.row
 			.col-lg-5
@@ -84,5 +84,7 @@ mixin listBlock(h4, h2)
 					.h2!= h2
 				else
 					+e.title!= h4
+					if sub
+						+e.subtitle= sub
 			.col-lg-7
 				block
