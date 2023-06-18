@@ -1,9 +1,14 @@
 mixin sAboutMenu(data)
 	// start sAboutMenu
-	+b.SECTION.sAboutMenu.section#sAboutMenu&attributes(attributes)
+	+b.sAboutMenu.section#sAboutMenu&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sAboutMenu
-				
 			+e.row.row
+				mixin item(i, h)
+					+e.item(href="#")
+						+icon(`sAboutMenu-${i}`)
+						p!= h
+				.col-md-6
+					+item(1, `Цели и&nbsp;задачи`)
+				.col-md-6
+					+item(2, `План работы`)
 	// end sAboutMenu
