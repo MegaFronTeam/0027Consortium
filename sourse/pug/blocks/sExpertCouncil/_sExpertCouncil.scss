@@ -1,0 +1,62 @@
+// start .sExpertCouncil
+.sExpertCouncil {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+	}
+	&__col {
+	}
+	&__item {
+	}
+	.listBlock {
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+	&__download {
+		padding: 5%;
+		background-color: $light;
+		@include media-breakpoint-up(lg) {
+			padding: rem(40);
+		}
+		.row {
+			align-items: center;
+			--bs-gutter-y: var(--bs-gutter-x);
+		}
+		p {
+			font-family: "Manrope";
+			margin-bottom: 0;
+			font-size: $h5-font-size;
+			font-weight: 500;
+			line-height: 125%;
+		}
+		.download-link {
+			&:not(:hover) {
+				border-color: $primary;
+				.download-link__subtitle {
+					color: $gray-300;
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sExpertCouncil
