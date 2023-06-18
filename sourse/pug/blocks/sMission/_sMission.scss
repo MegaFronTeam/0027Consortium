@@ -1,0 +1,55 @@
+// start .sMission
+.sMission {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: var(--sPB);
+		@include media-breakpoint-up(xxl) {
+			--bs-gutter-y: #{rem(136)};
+		}
+	}
+	.section-title {
+		h2 {
+			margin-bottom: var(--sTPB);
+		}
+		&__row {
+			--bs-gutter-y: var(--bs-gutter-x);
+		}
+		&__descr {
+			margin-top: 0;
+		}
+		.download-link {
+			width: rem(304);
+			max-width: 100%;
+			@include media-breakpoint-up(lg) {
+				width: 100%;
+			}
+		}
+	}
+	&__col {
+	}
+	&__item {
+	}
+	.sGoalsItem {
+		@include media-breakpoint-only(lg) {
+			font-size: rem(18);
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sMission

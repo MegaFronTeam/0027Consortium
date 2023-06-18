@@ -2,6 +2,7 @@ extends ../layout/main.pug
 
 include ../blocks/sAboutMenu/_sAboutMenu.pug
 include ../blocks/sRoles/_sRoles.pug
+include ../blocks/sMission/_sMission.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sPartners/_sPartners.pug
 //- include ../blocks/headerBlock/_headerBlock.pug
@@ -27,6 +28,7 @@ block pagecontent
 	main
 		+page-head(title, title)
 		+sAboutMenu()
+		+sMission()
 		+sRoles()
 		+sPartners()
 		+sForm()

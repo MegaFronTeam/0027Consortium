@@ -75,6 +75,14 @@ mixin newsItem(i, p)
 			+e.topic Новости Консорциума
 		p!= p
 
+mixin sGoalsItem(i, text, link)
+	+b.sGoalsItem&attributes(attributes)
+		+icon(`goals-${i}`)
+		+e.content
+			p!= text
+			if link
+				a(href="#") подробнее →
+
 
 mixin listBlock(h4, h2, sub)
 	+b.listBlock&attributes(attributes)
