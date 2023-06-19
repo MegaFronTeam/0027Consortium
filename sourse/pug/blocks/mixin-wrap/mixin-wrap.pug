@@ -77,7 +77,9 @@ mixin newsItem(i, p)
 
 mixin sGoalsItem(i, text, link)
 	+b.sGoalsItem&attributes(attributes)
-		+icon(`goals-${i}`)
+		//- +icon(`goals-${i}`)
+		+img(`img/svg/goals-${i}.svg`).img-svg-js
+		//- +icon(`goals-${i}`)
 		+e.content
 			p!= text
 			if link

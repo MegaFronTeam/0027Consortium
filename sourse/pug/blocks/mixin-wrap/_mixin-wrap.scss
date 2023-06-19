@@ -393,11 +393,20 @@
 	// 		color: $white;
 	// 	}
 	// }
-	.icon {
+	// .icon {
+	// 	font-size: rem(48);
+	// 	margin-right: rem(32);
+	// 	margin-bottom: rem(32);
+	// 	flex-shrink: 0;
+	// }
+	svg {
 		font-size: rem(48);
 		margin-right: rem(32);
 		margin-bottom: rem(32);
 		flex-shrink: 0;
+		& * {
+			fill: currentColor;
+		}
 	}
 	&__content {
 		display: flex;
@@ -498,7 +507,7 @@
 					opacity: 1;
 				}
 				p {
-					font-family: 'Manrope';
+					font-family: "Manrope";
 					font-size: $h5-font-size;
 					font-weight: 500;
 					line-height: 125%;
