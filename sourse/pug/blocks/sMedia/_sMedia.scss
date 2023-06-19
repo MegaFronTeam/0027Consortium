@@ -10,6 +10,10 @@
 	.section-title {
 	}
 	&__col {
+		display: none;
+		&.is-visible {
+			display: block;
+		}
 	}
 	&__album {
 		overflow: hidden;
@@ -22,6 +26,11 @@
 		@include block(1, 1);
 		overflow: hidden;
 		z-index: 2;
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
 		img {
 			@include mt;
 			position: absolute;

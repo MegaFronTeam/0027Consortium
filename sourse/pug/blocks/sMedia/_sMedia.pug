@@ -10,8 +10,22 @@ mixin sMedia(data)
 		.container
 			+e.album
 				+e.title
-					h4 
-						span Название альбома в&nbsp;одну или две строки
+					h4: span Название альбома в&nbsp;одну или две строки
+					+e.date 29.04.2022
+				.row
+					- for (var x = 0; x < 5; x++)
+						+sMediaItem(1)
+						+sMediaItem(2)
+						+sMediaItem(3)
+						+sMediaItem(4)
+						+sMediaItem(5)
+						+sMediaItem(6)
+						+sMediaItem(7)
+						+sMediaItem(8)
+
+			+e.album
+				+e.title
+					h4: span Название альбома в&nbsp;одну или две строки
 					+e.date 29.04.2022
 				.row
 					- for (var x = 1; x < 5; x++)
@@ -19,19 +33,16 @@ mixin sMedia(data)
 
 			+e.album
 				+e.title
-					h4 
-						span Название альбома в&nbsp;одну или две строки
+					h4: span Название альбома в&nbsp;одну или две строки для наглядности отображения длинных названий пример
 					+e.date 29.04.2022
 				.row
-					- for (var x = 1; x < 5; x++)
-						+sMediaItem(x)
-
-			+e.album
-				+e.title
-					h4 
-						span Название альбома в&nbsp;одну или две строки для наглядности отображения длинных названий пример
-					+e.date 29.04.2022
-				.row
-					- for (var x = 5; x < 9; x++)
-						+sMediaItem(x)
+					- for (var x = 0; x < 5; x++)
+						+sMediaItem(5)
+						+sMediaItem(6)
+						+sMediaItem(7)
+						+sMediaItem(8)
+						+sMediaItem(1)
+						+sMediaItem(2)
+						+sMediaItem(3)
+						+sMediaItem(4)
 	// end sMedia

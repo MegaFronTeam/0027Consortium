@@ -348,7 +348,31 @@ const JSCCommon = {
 				btnDisabled.attr('disabled', 'disabled');
 			}
 		})
-	}
+	},
+	sMediaMore: function sMediaMore() {
+		const sMediaParents = document.querySelectorAll('.sMedia__album .row');
+		for (const sMediaParent of sMediaParents) {
+			let sMediaShownItems = 4;
+			const sMediaItemsLength = sMediaParent.querySelectorAll('.sMedia__col').length;
+			$(`.sMedia__col:nth-child(-n + ${sMediaShownItems})`).addClass('is-visible')
+			if (sMediaShownItems < sMediaItemsLength) {
+				const buttonMore = document.createElement('button');
+				const buttonMoreWrap = document.createElement('div');
+				let hiddenItems = sMediaItemsLength - sMediaShownItems;
+				let btnContent = 'Еще' + ' ' + hiddenItems + ' ' + 'фотографий';
+				buttonMore.textContent = btnContent;
+				buttonMoreWrap.className = 'sMedia__btn-wrap';
+				buttonMore.className = 'sMedia__btn-more';
+				sMediaParent.appendChild(buttonMoreWrap);
+				buttonMoreWrap.appendChild(buttonMore);
+				
+				buttonMore.addEventListener('click', function () {
+					$(this).parent().siblings(`.sMedia__col:not(:nth-child(-n + ${sMediaShownItems}))`).toggleClass('is-visible');
+					$(this).text($(this).text() == btnContent ? 'Свернуть' : btnContent);
+				});
+			};
+		};
+	},
 };
 const $ = jQuery;
 
@@ -357,6 +381,7 @@ function eventHandler() {
 	// JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
+	JSCCommon.sMediaMore();
 	// JSCCommon.sendForm();
 	JSCCommon.imgToSVG();
 	JSCCommon.heightwindow();
