@@ -1,8 +1,10 @@
 // start .sPlan
 .sPlan {
-	--sPT: #{rem(96)};
-	// --sPB: #{rem(103)};
-	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(96)};
+		// --sPB: #{rem(103)};
+		// --sTPB: #{rem()};
+	}
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};

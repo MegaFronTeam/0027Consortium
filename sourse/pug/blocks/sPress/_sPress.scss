@@ -1,7 +1,9 @@
 // start .sPress
 .sPress {
-	--sPT: #{rem(96)};
-	--sPB: #{rem(103)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(96)};
+		--sPB: #{rem(103)};
+	}
 	// --sTPB: #{rem()};
 	&__row {
 		// --bs-gutter-x: #{rem()};
