@@ -36,7 +36,7 @@ mixin sMedia(data)
 					h4: span Название альбома в&nbsp;одну или две строки для наглядности отображения длинных названий пример
 					+e.date 29.04.2022
 				.row
-					- for (var x = 0; x < 5; x++)
+					- for (var x = 0; x < 3; x++)
 						+sMediaItem(5)
 						+sMediaItem(6)
 						+sMediaItem(7)
@@ -45,4 +45,6 @@ mixin sMedia(data)
 						+sMediaItem(2)
 						+sMediaItem(3)
 						+sMediaItem(4)
+			+e.btn-wrap.mt-0.justify-content-center
+				+e.btn.btn.btn-primary(href="#") Показать еще
 	// end sMedia
