@@ -1,0 +1,113 @@
+// start .sMedia
+.sMedia {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	// &__row {
+	// 	// --bs-gutter-x: #{rem()};
+	// 	--bs-gutter-y: var(--bs-gutter-x);
+	// }
+	.section-title {
+	}
+	&__col {
+	}
+	&__album {
+		overflow: hidden;
+		margin-bottom: rem(80);
+		.row {
+			--bs-gutter-y: var(--bs-gutter-x);
+		}
+	}
+	&__item {
+		@include block(1, 1);
+		overflow: hidden;
+		z-index: 2;
+		img {
+			@include mt;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: -2;
+		}
+	}
+
+	&__title {
+		@include roww(#{rem(32)});
+		--bs-gutter-y: calc(var(--bs-gutter-x) / 2);
+		--spaceEnd: #{rem(12)};
+		overflow: hidden;
+		margin-bottom: 0;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-bottom: rem(40);
+		@include media-breakpoint-up(md) {
+			flex-wrap: nowrap;
+		}
+
+		h4 {
+			font-size: $h4-font-size;
+			padding-bottom: var(--spaceEnd);
+			color: $primary;
+			font-family: "Manrope";
+			font-style: normal;
+			font-weight: 500;
+			line-height: 125%;
+			text-transform: none;
+			@include media-breakpoint-up(md) {
+				max-width: 28.1em;
+				flex: 1 0 0%;
+				margin-right: auto;
+			}
+			span {
+				position: relative;
+				&:before {
+					content: "";
+					position: absolute;
+					left: 0;
+					bottom: calc(-1 * var(--spaceEnd) + 2px);
+					width: 100vw;
+					height: 1px;
+					background-color: $light-primary;
+				}
+				&::after {
+					content: "";
+					position: absolute;
+					left: 0;
+					bottom: calc(-1 * var(--spaceEnd) + 2px);
+					width: 100%;
+					height: 1px;
+					background-color: currentColor;
+				}
+			}
+		}
+	}
+	&__date {
+		font-family: "Manrope";
+		font-style: normal;
+		font-weight: 500;
+		font-size: rem(13);
+		line-height: calc(18 / 13);
+		flex: 0 0 auto;
+		width: auto;
+		color: $gray-300;
+		@include media-breakpoint-up(md) {
+			padding-bottom: var(--spaceEnd);
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sMedia
