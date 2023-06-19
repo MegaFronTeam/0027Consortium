@@ -400,7 +400,9 @@
 	// 	flex-shrink: 0;
 	// }
 	svg {
-		font-size: rem(48);
+		// font-size: rem(48);
+		max-width: rem(48);
+		max-height: rem(48);
 		margin-right: rem(32);
 		margin-bottom: rem(32);
 		flex-shrink: 0;
