@@ -365,7 +365,7 @@ const JSCCommon = {
 				buttonMore.className = 'sMedia__btn-more';
 				sMediaParent.appendChild(buttonMoreWrap);
 				buttonMoreWrap.appendChild(buttonMore);
-				
+
 				buttonMore.addEventListener('click', function () {
 					$(this).parent().siblings(`.sMedia__col:not(:nth-child(-n + ${sMediaShownItems}))`).toggleClass('is-visible');
 					$(this).text($(this).text() == btnContent ? 'Свернуть' : btnContent);
@@ -508,7 +508,17 @@ function eventHandler() {
 		});
 	}
 
-
+	const panzoomClass = document.querySelector('.f-panzoom');
+	const panzoomOptions = {
+		wheel: false,
+		Toolbar: {
+			display: ["zoomIn", "zoomOut", "toggleFS"],
+			click: "toggleCover",
+		},
+	};
+	if (panzoomClass) {
+		new Panzoom(panzoomClass, panzoomOptions, { Toolbar });
+	}
 
 };
 if (document.readyState !== 'loading') {
