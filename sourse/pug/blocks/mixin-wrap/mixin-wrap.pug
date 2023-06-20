@@ -34,7 +34,7 @@ mixin addblock()
 mixin search()
 	+b.search-block
 		form
-			input(type="text" placeholder="Поиск по номеру или названию запчасти")
+			input(type="text" placeholder="Поиск по новостям")
 			button 
 				+icon("search")
 
@@ -79,7 +79,6 @@ mixin sGoalsItem(i, text, link)
 	+b.sGoalsItem&attributes(attributes)
 		//- +icon(`goals-${i}`)
 		+img(`img/svg/goals-${i}.svg`).img-svg-js
-		//- +icon(`goals-${i}`)
 		+e.content
 			p!= text
 			if link

@@ -6,7 +6,8 @@ mixin sPress(data)
 				.col-sm-6.col-lg-4
 					mixin press-item(i, h)
 						+b.pressItem(href="#")
-							+icon(`sPress-${i}`)
+							//- +icon(`sPress-${i}`)
+							+img(`img/svg/sPress-${i}.svg`).img-svg-js
 							+e.title!= h
 					+press-item(1, `Новости`)
 				.col-sm-6.col-lg-4

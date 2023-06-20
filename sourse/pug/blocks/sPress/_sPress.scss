@@ -52,10 +52,19 @@
 		color: $white;
 		background-color: $primary;
 	}
-	.icon {
-		font-size: rem(64);
+	svg {
+		max-width: rem(64);
+		max-height: rem(64);
 		margin-bottom: 10.75%;
+		flex-shrink: 0;
+		& * {
+			fill: currentColor;
+		}
 	}
+	// .icon {
+	// 	font-size: rem(64);
+	// 	margin-bottom: 10.75%;
+	// }
 	&__title {
 		font-weight: 400;
 		font-size: rem(24);

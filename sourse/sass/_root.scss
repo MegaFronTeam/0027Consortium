@@ -50,6 +50,27 @@
 
 	//  --carousel-button-svg-stroke-width: 2.5;
 	//  --carousel-button-svg-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0/ 0.4));
+
+	.air-datepicker {
+		font-weight: 500;
+		--adp-font-family: "Manrope";
+		--adp-font-size: 13px;
+		--adp-cell-background-color-selected: #0149d6;
+		--adp-background-color-selected-other-month: #0149d6;
+		--adp-background-color-selected-other-month-focused: #{rgba($color: #0149d6, $alpha: 0.7)};
+		--adp-background-color-in-range: #{rgba($color: #0149d6, $alpha: 0.1)};
+		--adp-background-color-in-range-focused: #{rgba($color: #0149d6, $alpha: 0.2)};
+		--adp-cell-background-color-selected-hover: #{rgba($color: #0149d6, $alpha: 0.7)};
+		--adp-cell-background-color-in-range: #{rgba($color: #0149d6, $alpha: 0.1)};
+		--adp-cell-background-color-in-range-hover: #{rgba($color: #0149d6, $alpha: 0.2)};
+		--adp-day-name-color: #E23737;
+		--adp-color-current-date: #E23737;
+
+		--adp-border-color: #D7D8E0;
+    --adp-border-color-inner: #D7D8E0;
+    --adp-border-radius: 0;
+    --adp-border-color-inline: #D7D8E0;
+	}
 }
 
 @include media-breakpoint-up(xl) {

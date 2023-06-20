@@ -1,0 +1,91 @@
+// start .sNews
+.sNews {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	// .section-title {
+	// }
+	// &__col {
+	// }
+	// &__item {
+	// }
+	.form-wrap {
+		&__row {
+			--bs-gutter-y: calc(var(--bs-gutter-x) / 2);
+		}
+		input {
+			padding: rem(15);
+			background-color: $light;
+			border-radius: 0;
+			font-family: "Manrope";
+			font-weight: 500;
+			font-size: 13px;
+			line-height: calc(18 / 13);
+			border: 1px solid transparent;
+			background-clip: padding-box;
+			&:focus {
+				background-color: $white;
+				border-color: $light-primary;
+			}
+		}
+		.icon {
+			font-size: rem(16);
+		}
+		.search-block {
+			input {
+				padding-left: rem(48);
+				&:focus {
+					& + button {
+						color: $primary;
+					}
+				}
+			}
+			button {
+				@include mt;
+				padding: 0;
+				width: rem(48);
+				left: 0;
+				color: $body-color;
+				&:hover {
+					color: $primary;
+				}
+			}
+		}
+		.data-picker-wrap {
+			.form-group {
+				position: relative;
+			}
+			.form-control {
+				padding-right: rem(36);
+			}
+			.icon-calendar {
+				@include a-cent(y);
+				right: rem(16);
+				pointer-events: none;
+				// position: absolute;
+				&.active {
+					color: $primary;
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sNews

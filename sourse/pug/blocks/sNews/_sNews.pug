@@ -1,0 +1,16 @@
+mixin sNews(data)
+	// start sNews
+	+b.SECTION.sNews.section#sNews&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 sNews
+			+form-wrap
+				+e.row.row
+					.col-md-8
+						+search()
+					.col-md-4
+						.data-picker-wrap
+							+input("Выберите дату или период",'text', '','datettime')(required readonly autocomplete="off").data-picker--js
+								+icon('calendar')
+			+e.row.row
+	// end sNews
