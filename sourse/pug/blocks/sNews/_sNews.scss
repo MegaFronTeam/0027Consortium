@@ -1,11 +1,18 @@
 // start .sNews
 .sNews {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(40)};
+	--sPB: #{rem(110)};
 	// --sTPB: #{rem()};
+	@include media-breakpoint-up(xl) {
+		--sPB: #{rem(140)};
+	}
+
 	&__row {
 		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
+		--bs-gutter-y: var(--sTPB);
+		@include media-breakpoint-up(xl) {
+			--bs-gutter-y: #{rem(80)};
+		}
 	}
 	// .section-title {
 	// }
@@ -14,6 +21,7 @@
 	// &__item {
 	// }
 	.form-wrap {
+		margin-bottom: var(--sPT);
 		&__row {
 			--bs-gutter-y: calc(var(--bs-gutter-x) / 2);
 		}
