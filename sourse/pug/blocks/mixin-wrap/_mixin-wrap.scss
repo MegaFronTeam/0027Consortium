@@ -238,6 +238,28 @@
 	.breadcrumb-slider {
 		overflow: visible;
 	}
+	&.page-head--contacts {
+		.page-head__row {
+			align-items: center;
+		}
+		.page-head__title {
+			margin-bottom: rem(22);
+		}
+		h1 {
+			margin-bottom: 0;
+		}
+		.h2 {
+			color: $white;
+			font-variation-settings: "wdth" 120, "GRAD" 0, "slnt" 0, "XTRA" 470, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 712,
+				"YTAS" 750, "YTDE" -203, "YTFI" 738, "opsz" 40;
+			line-height: 125%;
+			font-weight: 400;
+			text-transform: none;
+			@include media-breakpoint-down(xxl) {
+				@include rfs(#{rem(32)}, font-size);
+			}
+		}
+	}
 }
 
 .breadcrumb {
@@ -523,5 +545,3 @@
 		}
 	}
 }
-
-

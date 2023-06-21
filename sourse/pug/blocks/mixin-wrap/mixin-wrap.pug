@@ -42,8 +42,9 @@ mixin page-head(t,...items)
 	+b.page-head
 		- let l = items.length
 		.container
-			h1= t
-			+breadcrumb('Главная',...items)
+			if t
+				h1= t
+				+breadcrumb('Главная',...items)
 
 
 mixin parts(elem)

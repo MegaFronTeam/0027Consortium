@@ -10,3 +10,4 @@
 8. <https://megafronteam.github.io/0027Consortium/public/09-media.html>
 9. <https://megafronteam.github.io/0027Consortium/public/10-industrial-partner.html>
 10. <https://megafronteam.github.io/0027Consortium/public/11-expert-council.html>
+11. <https://megafronteam.github.io/0027Consortium/public/12-contacts.html>

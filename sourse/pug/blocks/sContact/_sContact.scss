@@ -1,48 +1,87 @@
-
-	// start .sContact
-	.sContact {
-	// --sPT: #{rem()};
+// start .sContact
+.sContact {
+	--sPT: 0;
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	&__row{
+	&__row {
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
-
 	}
-	.section-title{
-		
+	.section-title {
+		.h2 {
+			color: $white;
+			font-variation-settings: "wdth" 120, "GRAD" 0, "slnt" 0, "XTRA" 470, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 712,
+				"YTAS" 750, "YTDE" -203, "YTFI" 738, "opsz" 40;
+			line-height: 125%;
+			font-weight: 400;
+			text-transform: none;
+			@include media-breakpoint-down(xxl) {
+				@include rfs(#{rem(32)}, font-size);
+			}
+		}
 	}
-	&__col{
-
+	&__headig {
+		position: relative;
+		padding-bottom: rem(40);
+		z-index: 2;
+		@include media-breakpoint-down(lg) {
+			padding-top: rem(20);
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 150vw;
+			height: calc(100% + 2px);
+			left: -50vw;
+			top: -2px;
+			background-color: $primary;
+			pointer-events: none;
+			z-index: -1;
+		}
 	}
-	&__item{
-
+	&__col {
 	}
-	&__slide{
+	&__item {
+	}
+	&__slide {
 		height: auto;
 	}
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-up(xs) {
+	}
 
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
+
+	//
+	@include media-breakpoint-only(xs) {
+	}
+	@include media-breakpoint-only(sm) {
+	}
+	@include media-breakpoint-only(md) {
+	}
+	@include media-breakpoint-only(lg) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+	@include media-breakpoint-down(lg) {
+	}
+	@include media-breakpoint-down(md) {
+	}
+	@include media-breakpoint-down(sm) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
 } // end.sContact
