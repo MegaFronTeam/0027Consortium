@@ -1,6 +1,6 @@
-mixin sMediaItem(img)
+mixin sMediaItem(img, g)
 	+e.col.col-6.col-lg-3
-		+e.item(href=`img/sMedia-${img}.jpg` data-fancybox="sMedia")
+		+e.item(href=`img/sMedia-${img}.jpg` data-fancybox=`sMedia-${g}`)
 			+img(`img/sMedia-${img}.jpg`, 'bg')
 
 
@@ -14,22 +14,24 @@ mixin sMedia(data)
 					+e.date 29.04.2022
 				.row
 					- for (var x = 0; x < 5; x++)
-						+sMediaItem(1)
-						+sMediaItem(2)
-						+sMediaItem(3)
-						+sMediaItem(4)
-						+sMediaItem(5)
-						+sMediaItem(6)
-						+sMediaItem(7)
-						+sMediaItem(8)
+						+sMediaItem(1, 1)
+						+sMediaItem(2, 1)
+						+sMediaItem(3, 1)
+						+sMediaItem(4, 1)
+						+sMediaItem(5, 1)
+						+sMediaItem(6, 1)
+						+sMediaItem(7, 1)
+						+sMediaItem(8, 1)
 
 			+e.album
 				+e.title
 					h4: span Название альбома в&nbsp;одну или две строки
 					+e.date 29.04.2022
 				.row
-					- for (var x = 1; x < 5; x++)
-						+sMediaItem(x)
+					+sMediaItem(1, 2)
+					+sMediaItem(2, 2)
+					+sMediaItem(3, 2)
+					+sMediaItem(4, 2)
 
 			+e.album
 				+e.title
@@ -37,14 +39,14 @@ mixin sMedia(data)
 					+e.date 29.04.2022
 				.row
 					- for (var x = 0; x < 3; x++)
-						+sMediaItem(5)
-						+sMediaItem(6)
-						+sMediaItem(7)
-						+sMediaItem(8)
-						+sMediaItem(1)
-						+sMediaItem(2)
-						+sMediaItem(3)
-						+sMediaItem(4)
+						+sMediaItem(5, 3)
+						+sMediaItem(6, 3)
+						+sMediaItem(7, 3)
+						+sMediaItem(8, 3)
+						+sMediaItem(1, 3)
+						+sMediaItem(2, 3)
+						+sMediaItem(3, 3)
+						+sMediaItem(4, 3)
 			+e.btn-wrap.mt-0.justify-content-center
 				+e.btn.btn.btn-primary(href="#") Показать еще
 	// end sMedia

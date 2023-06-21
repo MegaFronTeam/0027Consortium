@@ -172,6 +172,7 @@
 		@include block(318, 416);
 		margin-bottom: rem(26);
 		overflow: hidden;
+		background-color: $light;
 		@include media-breakpoint-up(xxl) {
 			margin-bottom: rem(32);
 		}
