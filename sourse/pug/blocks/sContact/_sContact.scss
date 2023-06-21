@@ -1,11 +1,39 @@
 // start .sContact
 .sContact {
-	--sPT: 0;
+	--sPT: #{rem(27)};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
+	@include media-breakpoint-down(lg) {
+		--sTPB: #{rem(40)};
+	}
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
+	}
+	&__col {
+		position: relative;
+	}
+
+	&__map-wrap {
+		width: 100%;
+		position: relative;
+		z-index: 3;
+		background-color: $light;
+		@include media-breakpoint-down(lg) {
+			@include block(214, 324);
+			margin-bottom: rem(40);
+		}
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+			width: calc(100% - var(--bs-gutter-x));
+			height: 100%;
+			left: calc(100% + var(--bs-gutter-x) / 2);
+			top: 0;
+			overflow: hidden;
+		}
+		& > * {
+			height: 100%;
+		}
 	}
 	.section-title {
 		.h2 {
@@ -23,29 +51,52 @@
 	&__headig {
 		position: relative;
 		padding-bottom: rem(40);
-		z-index: 2;
-		@include media-breakpoint-down(lg) {
-			padding-top: rem(20);
+		// margin-bottom: rem(40);
+		@include media-breakpoint-up(lg) {
+			padding-bottom: rem(56);
+			margin-bottom: rem(56);
 		}
+		z-index: 2;
+		color: $white;
+
 		&::before {
 			content: "";
 			position: absolute;
 			width: 150vw;
-			height: calc(100% + 2px);
+			height: calc(100% + #{rem(27)});
 			left: -50vw;
-			top: -2px;
+			top: rem(-28);
 			background-color: $primary;
 			pointer-events: none;
 			z-index: -1;
+			@include media-breakpoint-down(lg) {
+				height: calc(140% + #{rem(27)});
+			}
 		}
 	}
-	&__col {
+
+	.form-wrap {
+		max-width: 526px;
+		&__policy {
+			font-family: 'Golos Text', sans-serif;
+			font-weight: 500;
+			font-size: rem(13);
+			line-height: 150%;
+			a {
+				&:not(:hover) {
+					color: $danger;
+				}
+			}
+		}
 	}
-	&__item {
-	}
-	&__slide {
-		height: auto;
-	}
+
+	// &__col {
+	// }
+	// &__item {
+	// }
+	// &__slide {
+	// 	height: auto;
+	// }
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

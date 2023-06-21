@@ -3,9 +3,30 @@ mixin sContact()
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
 			+e.row.row
-				.col-lg-6
+				+e.col.col-lg-6
 					+e.headig
 						+b.section-title.d-lg-none
 							.h2 АНО &laquo;Консорциум &laquo;Медицинская Техника&raquo;
+						+e.item
+							span Адрес:
+							p Башня &laquo;Империя&raquo; Московского международного делового центра &laquo;Москва‑Сити&raquo;: 123112, г.Москва, Пресненская набережная, д.6, стр.2, 17‑й этаж, офис 1703
+						+e.item
+							span E-mail: 
+							a(href="mailto:info@anokmt.ru ") info@anokmt.ru
+					+e.map-wrap
+						script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad1baa0a48552e1c92cf9c8ff4171e395322df3d30149a3c8f97d83fcdc99bac2&width=100%25&height=564&lang=ru_RU&scroll=false')
+					+form-wrap
+						.h2 Написать нам
+						+input('Василий Вариантович')
+						+input('+7 ___ ___ __ __', 'tel')
+						+input('Введите', 'email')
+						+input('Введите', 'textarea')
+						+e.row.row
+							.col-auto
+								+e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
+							.col
+								+e.policy Нажимая кнопку Отправить вы подтверждаете что ознакомлены с 
+									a(href="#") политикой конфиденциальности 
+						
 
 	// end sContact
