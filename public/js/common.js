@@ -506,7 +506,7 @@ function eventHandler() {
 				days: 'yyyy <i>MMMM</i>',
 			},
 		});
-	}
+	};
 
 	const panzoomClass = document.querySelector('.f-panzoom');
 	const panzoomOptions = {
@@ -518,8 +518,24 @@ function eventHandler() {
 	};
 	if (panzoomClass) {
 		new Panzoom(panzoomClass, panzoomOptions, { Toolbar });
-	}
-
+	};
+	let filterBtnsParents = document.querySelectorAll('.filter-block__btns');
+	if (filterBtnsParents) {
+		for (const filterBtnsParent of filterBtnsParents) {
+			let filterBtns = filterBtnsParent.querySelectorAll('.custom-input__input');
+			filterBtnsParent.addEventListener('click', function(event) {
+				let mainBtnTarget = event.target.closest('.custom-input__input[value="all"]');
+				if(mainBtnTarget) {
+					filterBtns.forEach(filterBtn => {
+						filterBtn.checked = false;
+						filterBtnsParent.querySelector('.custom-input__input[value="all"]').checked = true;
+					});
+				} else {
+					filterBtnsParent.querySelector('.custom-input__input[value="all"]').checked = false;
+				}
+			})
+		}
+	};
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

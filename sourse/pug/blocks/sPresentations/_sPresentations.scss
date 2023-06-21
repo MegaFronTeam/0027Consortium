@@ -1,0 +1,101 @@
+// start .sPresentations
+.sPresentations {
+	--sPT: #{rem(42)};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+	}
+	&__col {
+	}
+	&__item {
+	}
+	.filter-block {
+		margin-bottom: rem(40);
+		@include media-breakpoint-up(xl) {
+			margin-bottom: rem(56);
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sPresentations
+
+.filter-block {
+	// margin-bottom: calc(var(--main-gutter) * 1.33335);
+	&__btns {
+		@include roww(#{rem(8)}, 0, m);
+		--bs-gutter-y: var(--bs-gutter-x);
+		margin-top: calc(-1 * var(--bs-gutter-y));
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		.custom-input {
+			position: relative;
+			display: flex;
+			margin-top: var(--bs-gutter-y);
+			margin-bottom: 0;
+			flex: 0 0 auto;
+			font-family: "Manrope";
+			font-style: normal;
+			font-weight: 500;
+			font-size: rem(13);
+			line-height: calc(18 / 13);
+			padding: rem(10) rem(16);
+			z-index: 2;
+			cursor: auto;
+		}
+		.custom-input__input {
+			@include mt(0.2s);
+			--bs-form-check-bg-image: none;
+			position: absolute;
+			float: none;
+			background-color: $light;
+			border: 2px solid transparent;
+			border-radius: 0;
+			box-shadow: none;
+			height: 100%;
+			left: 0;
+			margin-left: 0;
+			margin-top: 0;
+			top: 0;
+			width: 100%;
+			z-index: -1;
+			&:not(:disabled) {
+				&:hover {
+					background-color: rgba($color: $primary, $alpha: 0.1);
+				}
+			}
+			&.form-check-input:checked[type="checkbox"] {
+				--bs-form-check-bg-image: none;
+				background-color: rgba($color: $primary, $alpha: 0.1);
+				border-color: $primary;
+			}
+			&.form-check-input:disabled {
+				opacity: 0.2;
+				& ~ .form-check-label {
+					opacity: 0.2;
+				}
+			}
+		}
+		.custom-input__text {
+			@include mt(0.2s);
+			pointer-events: none;
+		}
+	}
+}

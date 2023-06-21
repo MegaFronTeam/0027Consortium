@@ -1,0 +1,16 @@
+mixin sPresentations(data)
+	// start sPresentations
+	+b.sPresentations.section#sPresentations&attributes(attributes)
+		.container
+			+b.filter-block
+				//- +e.row.row
+				+e.btns
+					+in-c(`checkbox`, `Все презентации`)(value="all")
+					+in-c(`checkbox`, `Медицинская техника`)(checked)
+					+in-c(`checkbox`, `Препараты`)(checked)
+					+in-c(`checkbox`, `Еще тематика`)
+					+in-c(`checkbox`, `Больницы`)
+					+in-c(`checkbox`, `Еще тематика`)(disabled)
+					+in-c(`checkbox`, `Больницы`)
+			
+	// end sPresentations
