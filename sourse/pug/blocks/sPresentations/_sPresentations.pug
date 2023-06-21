@@ -12,5 +12,35 @@ mixin sPresentations(data)
 					+in-c(`checkbox`, `Больницы`)
 					+in-c(`checkbox`, `Еще тематика`)(disabled)
 					+in-c(`checkbox`, `Больницы`)
-			
+			mixin presentation-item(i, h4)
+				+b.presentation-item
+					+e.row.row
+						.col-lg-auto.order-lg-last
+							+e.img-wrap
+								+img(`img/presentation-${i}.jpg`)
+						.col
+							+e.content
+								+e.title
+									h4!= h4
+									p Продуктовая линейка ФРП и целевое назначение программ
+								+e.row-sm.row
+									.col-auto
+										+e.date 29.04.2022
+									.col-auto
+										+e.author Автор: Виктор Саламанский
+									.col-auto
+										+e.link(href="#") Скачать презентацию
+			+e.row.row
+				.col-12
+					+presentation-item(1, `Мобильный комплекс лучевой терапии`)
+				.col-12
+					+presentation-item(2, `Инструменты поддержки ФРП для предприятий ОПК на реализацию проектов по диверсификации производства`)
+				.col-12
+					+presentation-item(3, `Система финансирования проектов диверсификации предприятий обороннопромышленного комплекса`)
+				.col-12
+					+presentation-item(1, `Мобильный комплекс лучевой терапии`)
+				.col-12
+					+presentation-item(2, `Инструменты поддержки ФРП для предприятий ОПК на реализацию проектов по диверсификации производства`)
+				.col-12
+					+presentation-item(3, `Система финансирования проектов диверсификации предприятий обороннопромышленного комплекса`)
 	// end sPresentations
