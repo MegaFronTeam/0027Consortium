@@ -262,9 +262,14 @@
 	}
 	&.page-head--article {
 		color: $white;
+		padding-top: rem(40);
+		padding-bottom: rem(214);
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(56);
+		}
 		.page-head__btn-back {
 			color: $white;
-			
+
 			.icon {
 				font-size: rem(24);
 				margin-bottom: rem(40);
