@@ -20,7 +20,7 @@
 		z-index: 3;
 		background-color: $light;
 		@include media-breakpoint-down(lg) {
-			@include block(214, 324);
+			@include block(3, 4);
 			margin-bottom: rem(40);
 		}
 		@include media-breakpoint-up(lg) {
@@ -51,8 +51,10 @@
 	&__headig {
 		position: relative;
 		padding-bottom: rem(40);
-		// margin-bottom: rem(40);
 		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(40);
+		}
+		@include media-breakpoint-up(xl) {
 			padding-bottom: rem(56);
 			margin-bottom: rem(56);
 		}
@@ -74,19 +76,162 @@
 			}
 		}
 	}
+	&__item {
+		margin-bottom: rem(30);
+		&:last-child {
+			margin-bottom: 0;
+		}
+		p,
+		a {
+			color: $white;
+			font-size: $h4-font-size;
+			font-family: "Manrope";
+			font-weight: 500;
+			margin-bottom: 0;
+			line-height: 150%;
+			@include media-breakpoint-up(lg) {
+				max-width: 18.1em;
+			}
+			@include media-breakpoint-down(xxl) {
+				@include rfs(#{rem(24)}, font-size);
+			}
+		}
+		a {
+			position: relative;
+			&::after {
+				content: "";
+				@include mt(0.25s);
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 2px;
+				max-width: 0;
+				background-color: currentColor;
+			}
+			&:hover {
+				&::after {
+					max-width: 100%;
+				}
+			}
+		}
+	}
+	&__subtitle {
+		font-size: rem(20);
+		color: $gray-300;
+		font-weight: 600;
+	}
 
 	.form-wrap {
-		max-width: 526px;
-		&__policy {
-			font-family: 'Golos Text', sans-serif;
+		--bs-form-control-bg: #ffffff;
+		@include media-breakpoint-up(xxl) {
+			max-width: rem(526);
+		}
+		&__row {
+			align-items: center;
+			margin-top: rem(40);
+			@include media-breakpoint-up(xl) {
+				margin-top: rem(56);
+			}
+		}
+		.h2 {
+			margin-bottom: rem(40);
+			@include media-breakpoint-up(xl) {
+				margin-bottom: rem(56);
+			}
+		}
+		&__input-wrap {
+			position: relative;
+			margin-bottom: rem(21);
+			&::before {
+				content: "";
+				position: absolute;
+				left: 1px;
+				top: 1px;
+				width: calc(100% - 2px);
+				height: rem(28);
+				background-color: var(--bs-form-control-bg);
+				border-radius: rem(10) rem(10) 0 0;
+				pointer-events: none;
+			}
+			&.form-wrap__input-wrap--icon {
+				&::before {
+					width: calc(100% - #{rem(56)});
+					left: auto;
+					right: 1px;
+					border-radius: 0 rem(10) 0 0;
+				}
+				.form-wrap__input-title {
+					left: rem(55);
+				}
+				.form-wrap__input {
+					padding-left: rem(55);
+				}
+			}
+			.icon {
+				@include a-cent(y);
+				left: rem(16);
+				color: #3f457a;
+				font-size: rem(24);
+				pointer-events: none;
+			}
+		}
+		&__input {
+			font-weight: 400;
+			font-size: rem(20);
+			line-height: 150%;
+			font-variation-settings: "wdth" 120, "GRAD" 0, "slnt" 0, "XTRA" 470, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 712,
+				"YTAS" 750, "YTDE" -203, "YTFI" 738, "opsz" 20;
+			color: #363636;
+			border-color: $gray-300;
+			padding: rem(29) rem(16) rem(11);
+			border-radius: rem(10);
+			&:focus {
+				border-color: $secondary;
+			}
+			&::placeholder {
+				color: rgba(0, 0, 0, 0.5);
+			}
+		}
+		&__input-title {
+			font-family: "Manrope";
+			font-style: normal;
 			font-weight: 500;
 			font-size: rem(13);
-			line-height: 150%;
+			line-height: calc(18 / 13);
+			color: rgba(0, 0, 0, 0.5);
+			position: absolute;
+			top: rem(11);
+			left: rem(16);
+			pointer-events: none;
+		}
+		&__policy {
+			font-family: "Golos Text", sans-serif;
+			font-weight: 500;
+			font-size: rem(13);
+			line-height: 155%;
+			@include media-breakpoint-up(xl) {
+				max-width: 24.5em;
+				margin-left: auto;
+			}
 			a {
 				&:not(:hover) {
 					color: $danger;
 				}
 			}
+		}
+		textarea {
+			min-height: rem(131);
+			resize: vertical;
+		}
+		&__btn {
+			--bs-btn-padding-x: #{rem(27)};
+			--bs-btn-padding-y: #{rem(16)};
+			--bs-btn-font-size: #{rem(20)};
+			--bs-btn-line-height: 1.5;
+			--bs-btn-border-radius: 0;
+			font-variation-settings: "wdth" 120, "GRAD" 0, "slnt" 0, "XTRA" 470, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 712,
+				"YTAS" 750, "YTDE" -203, "YTFI" 738, "opsz" 20;
 		}
 	}
 

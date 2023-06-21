@@ -8,19 +8,33 @@ mixin sContact()
 						+b.section-title.d-lg-none
 							.h2 АНО &laquo;Консорциум &laquo;Медицинская Техника&raquo;
 						+e.item
-							span Адрес:
+							+e.subtitle Адрес:
 							p Башня &laquo;Империя&raquo; Московского международного делового центра &laquo;Москва‑Сити&raquo;: 123112, г.Москва, Пресненская набережная, д.6, стр.2, 17‑й этаж, офис 1703
 						+e.item
-							span E-mail: 
+							+e.subtitle E-mail: 
 							a(href="mailto:info@anokmt.ru ") info@anokmt.ru
+
 					+e.map-wrap
-						script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad1baa0a48552e1c92cf9c8ff4171e395322df3d30149a3c8f97d83fcdc99bac2&width=100%25&height=564&lang=ru_RU&scroll=false')
+						script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac73777fa48b1a8f7d746d6e1c8e66af7831fd40f87561b17afbdbdd8c06d77db&width=100%25&height=600&lang=ru_RU&scroll=false')
+
 					+form-wrap
 						.h2 Написать нам
-						+input('Василий Вариантович')
-						+input('+7 ___ ___ __ __', 'tel')
-						+input('Введите', 'email')
-						+input('Введите', 'textarea')
+						.form-wrap__input-wrap.form-wrap__input-wrap--icon.form-group
+							label
+								span.form-wrap__input-title Ваше имя
+								input.form-wrap__input.form-control.with-icon(name='text' type='text' placeholder='Введите')
+							+icon('user')
+						.form-wrap__input-wrap.form-wrap__input-wrap--icon.form-group
+							label
+								span.form-wrap__input-title Ваш номер телефона
+								input.form-wrap__input.form-control.with-icon(name='tel' type='tel' placeholder='Введите')
+							+icon('phone')
+						.form-wrap__input-wrap.form-wrap__input-wrap--icon.form-group
+							label
+								span.form-wrap__input-title Ваш e-mail
+								input.form-wrap__input.form-control.with-icon(name='email' type='email' placeholder='Введите')
+							+icon('email')
+						+input('Введите', 'textarea', 'Ваше сообщение')
 						+e.row.row
 							.col-auto
 								+e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
