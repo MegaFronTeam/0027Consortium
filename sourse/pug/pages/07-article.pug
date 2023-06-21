@@ -1,0 +1,50 @@
+extends ../layout/main.pug
+
+//- include ../blocks/sAboutMenu/_sAboutMenu.pug
+//- include ../blocks/sRoles/_sRoles.pug
+//- include ../blocks/sMission/_sMission.pug
+//- include ../blocks/sMeasures/_sMeasures.pug
+//- include ../blocks/sNews/_sNews.pug
+include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sPartners/_sPartners.pug
+//- include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/sGoals/_sGoals.pug
+//- include ../blocks/sBanner/_sBanner.pug
+//- include ../blocks/sBenefits/_sBenefits.pug
+//- include ../blocks/sNotice/_sNotice.pug
+include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '07-article.jpg'
+
+block title
+	- let  title= 'Консорциум «Медицинская техника» принял участие в международном конгрессе «Оргздрав-2022»'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+
+
+	+parts('header')
+	main
+		+b.page-head--article
+			.container
+				+e.btn-back(href="#")
+					+icon('arrow-back')
+				h1 Консорциум «Медицинская техника» принял участие в международном конгрессе «Оргздрав-2022»
+				+e.row.row
+					.col-auto
+						span 29.04.2022
+					.col-auto
+						span Новости Консорциума
+		
+
+		//- +sNews()
+		+sForm()
+
+	+parts('footer')
+
+
+
+

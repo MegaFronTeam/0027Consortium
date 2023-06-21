@@ -115,7 +115,7 @@
 		// 	flex-wrap: nowrap;
 		// }
 	}
-	&__row-sm {
+	&__row-sm.row {
 		--bs-gutter-x: #{rem(24)};
 		--bs-gutter-y: #{rem(16)};
 		font-family: "Manrope";
@@ -126,6 +126,9 @@
 		// @include media-breakpoint-up(lg) {
 		// 	flex-wrap: nowrap;
 		// }
+		@include media-breakpoint-up(xxl) {
+			--bs-gutter-x: #{rem(24)};
+		}
 	}
 	&__content {
 		flex: 1 0 0%;

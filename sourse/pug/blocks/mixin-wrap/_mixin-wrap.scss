@@ -260,6 +260,33 @@
 			}
 		}
 	}
+	&.page-head--article {
+		color: $white;
+		.page-head__btn-back {
+			color: $white;
+			
+			.icon {
+				font-size: rem(24);
+				margin-bottom: rem(40);
+				fill: none;
+				stroke: currentColor;
+			}
+		}
+		h1 {
+			margin-bottom: rem(47);
+		}
+		.page-head__row {
+			--bs-gutter-x: #{rem(24)};
+			span {
+				display: block;
+				font-family: "Manrope";
+				font-style: normal;
+				font-weight: 500;
+				font-size: rem(13);
+				line-height: calc(18 / 13);
+			}
+		}
+	}
 }
 
 .breadcrumb {
