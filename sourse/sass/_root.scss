@@ -63,13 +63,28 @@
 		--adp-cell-background-color-selected-hover: #{rgba($color: #0149d6, $alpha: 0.7)};
 		--adp-cell-background-color-in-range: #{rgba($color: #0149d6, $alpha: 0.1)};
 		--adp-cell-background-color-in-range-hover: #{rgba($color: #0149d6, $alpha: 0.2)};
-		--adp-day-name-color: #E23737;
-		--adp-color-current-date: #E23737;
+		--adp-day-name-color: #e23737;
+		--adp-color-current-date: #e23737;
 
-		--adp-border-color: #D7D8E0;
-    --adp-border-color-inner: #D7D8E0;
-    --adp-border-radius: 0;
-    --adp-border-color-inline: #D7D8E0;
+		--adp-border-color: #d7d8e0;
+		--adp-border-color-inner: #d7d8e0;
+		--adp-border-radius: 0;
+		--adp-border-color-inline: #d7d8e0;
+	}
+}
+
+.in-fullscreen [data-panzoom-action="toggleFS"] {
+	position: relative;
+	&::before {
+		content: "";
+		width: var(--f-button-svg-width);
+		height: var(--f-button-svg-height);
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='15' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.70065 7.99989L0 14.7006L1.29935 15.9999L8 9.29925L14.7006 15.9999L16 14.7006L9.29935 7.99989L15.9999 1.29936L14.7005 0L8 6.70053L1.29949 0L0.000139085 1.29936L6.70065 7.99989Z' fill='black'/%3e%3c/svg%3e ");
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	svg {
+		display: none;
 	}
 }
 

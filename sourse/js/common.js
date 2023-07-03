@@ -505,6 +505,7 @@ function eventHandler() {
 			navTitles: {
 				days: 'yyyy <i>MMMM</i>',
 			},
+			buttons: ['clear']
 		});
 	};
 
