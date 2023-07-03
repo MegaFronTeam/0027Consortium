@@ -505,6 +505,7 @@
 		padding-left: 0;
 		margin-bottom: 0;
 		li {
+			@include mt;
 			position: relative;
 			display: flex;
 			align-items: center;
@@ -524,6 +525,7 @@
 				border-bottom: 1px solid $light-primary;
 			}
 			&:before {
+				@include mt;
 				counter-increment: num;
 				content: counter(num);
 				position: absolute;
@@ -536,6 +538,7 @@
 				font-size: rem(120);
 				left: rem(17);
 				bottom: rem(-27);
+				top: auto;
 				@include media-breakpoint-up(md) {
 					font-size: rem(165);
 					left: rem(24);
@@ -543,13 +546,14 @@
 				}
 			}
 			p {
+				@include mt;
 				margin-bottom: 0;
 				max-width: 32.5em;
 				@include media-breakpoint-down(md) {
 					font-size: rem(16);
 				}
 			}
-			&.active {
+			&.active, &:hover {
 				// padding-left: rem(24);
 				border-top: 2px solid $primary;
 				border-bottom: 2px solid $primary;
@@ -560,8 +564,11 @@
 					padding-left: rem(189);
 				}
 				&:before {
-					@include a-cent1(y);
 					opacity: 1;
+					bottom: 50%;
+					opacity: 1;
+					top: auto;
+					transform: translateY(50%);
 				}
 				p {
 					font-family: "Manrope";
